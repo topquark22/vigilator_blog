@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WordPress editorial item metadata",
+  "description": "Sidecar metadata accompanying a raw .wp.html file; no credentials or article body.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "wordpress_site_id",
+    "wordpress_id",
+    "type",
+    "original_publication_date",
+    "slug",
+    "title",
+    "url",
+    "status",
+    "content_format"
+  ],
+  "properties": {
+    "wordpress_site_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "wordpress_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "type": {
+      "enum": [
+        "post",
+        "page"
+      ]
+    },
+    "original_publication_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Immutable WordPress site-local YYYY-MM-DD used for the directory."
+    },
+    "published_at_local": {
+      "type": "string",
+      "description": "Original WordPress-local publication timestamp with the time, when available."
+    },
+    "wordpress_modified_at": {
+      "type": "string",
+      "description": "Last reported WordPress modification timestamp at import."
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "publish",
+        "draft",
+        "pending",
+        "private",
+        "future"
+      ]
+    },
+    "content_format": {
+      "const": "wordpress-block-html"
+    },
+    "featured_media_id": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

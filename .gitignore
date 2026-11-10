@@ -1,0 +1,23 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+credentials/
+*.pem
+*.p12
+*.pfx
+
+# Local state and temporary files
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.swp
+*.swo
+.DS_Store
+.sync-cache/
+exports/
+tmp/
+*.bak
+*.orig
+*.rej
