@@ -40,3 +40,15 @@ The assistant's connected WordPress app access is not a reusable API credential 
 3. Implement guarded, explicitly approved publish + readback verification
 4. Implement import branches and baseline-aware three-way conflict detection
 5. Add media and page handling without altering unrelated article formatting
+
+## Importing original media with GitHub Actions
+
+The reusable workflow `.github/workflows/import-wordpress-media.yml` stages original binaries on an isolated `import/*` branch. It does **not** publish to WordPress or merge into `main`.
+
+1. Create an `import/<article-or-site>` branch from current `main`.
+2. Add `staging/media-manifest.json` on that branch. It has the same structure as `site/shared-media.json`: a top-level `assets` array of reviewed WordPress attachment metadata, including `wordpress_media_id`, `original_filename`, `source_url`, `mime_type`, and `expected_size_bytes`.
+3. Push the manifest commit. The workflow is triggered by the manifest change; it can also be started manually on an `import/*` branch from GitHub Actions.
+4. GitHub Actions downloads the original binaries, verifies sizes and supported image signatures, computes SHA-256 checksums and commits **only the manifest-listed media paths** to the staging branch. It makes no change if the verified files are already current.
+5. Inspect the staging artifacts. Construct one clean article commit on current `main` referencing the verified media Git blobs and the exact WordPress article source; do **not** merge staging commits or include the manifest in `main`.
+
+The download requires access only to the approved public WordPress media URLs; no WordPress publishing credentials are used. A failed fetch or verification must block the article import rather than silently omit media. Media remain ordinary Git blobs, not Git LFS.
