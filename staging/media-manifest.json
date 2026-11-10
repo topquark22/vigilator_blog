@@ -1,6 +1,6 @@
 {
   "wordpress_site_id": 228574095,
-  "description": "Batch staging for remaining 19 published posts; final Git main history uses one separate commit per article.",
+  "description": "Batch staging for remaining 19 published posts; request original image MIME types for exact binary fidelity.",
   "assets": [
     {
       "wordpress_site_id": 228574095,
