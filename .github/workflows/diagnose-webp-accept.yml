@@ -1,0 +1,28 @@
+name: Diagnose WebP content negotiation
+on:
+  push:
+    branches: [import/remaining-posts-media-20261110]
+    paths: [.github/workflows/diagnose-webp-accept.yml]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Inspect HTTP Accept and content types
+        run: |
+          python - <<'PY'
+          import hashlib
+          from urllib.request import urlopen,Request
+          url="https://topquark22.files.wordpress.com/2024/03/tallship.webp"
+          for addition in ("", "?format=webp", "?download=1", "?w=1792", "?ssl=1"):
+              for accept in ("image/webp", "image/avif,image/webp,image/*,*/*;q=0.8"):
+                  try:
+                      req=Request(url+addition,headers={"Accept":accept,"User-Agent":"Mozilla/5.0 (compatible; VigilatorBlogImport/1.0)"})
+                      with urlopen(req,timeout=15) as h:
+                          data=h.read(1_000_000)
+                          print(f"query={addition!r} accept={accept!r} bytes={len(data)} type={h.headers.get('content-type')!r} sig={data[:12].hex()} sha256={hashlib.sha256(data).hexdigest()}",flush=True)
+                  except Exception as e:
+                      print(f"query={addition!r} accept={accept!r} ERROR={str(e)}",flush=True)
+          PY
