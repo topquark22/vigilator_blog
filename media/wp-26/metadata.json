@@ -1,0 +1,17 @@
+{
+  "wordpress_site_id": 228574095,
+  "wordpress_media_id": 26,
+  "attached_post_id": 4,
+  "filename": "texas2.webp",
+  "source_url": "https://topquark22.wordpress.com/wp-content/uploads/2024/01/texas2.webp",
+  "mime_type": "image/webp",
+  "file_size_bytes": 485208,
+  "width": 1792,
+  "height": 1024,
+  "title": "texas2",
+  "alt_text": "",
+  "caption": "",
+  "git_blob_sha": "eb660ddffc27e31a86a430e0d854fc83c705ab1e",
+  "sha256": null,
+  "sha256_note": "Not yet independently computed: original bytes matched WordPress-reported size, and Git records the complete binary blob by SHA-1."
+}
