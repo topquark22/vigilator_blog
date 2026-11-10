@@ -1,0 +1,32 @@
+name: Stage shared WordPress media import
+on:
+  push:
+    branches:
+      - import/site-materials-stage
+    paths:
+      - .github/workflows/import-shared-site-assets.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-shared-media:
+    if: github.ref_name == 'import/site-materials-stage'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Fetch verified originals
+        run: python tools/fetch_wordpress_media.py --manifest site/shared-media.json
+      - name: Commit imported binary assets on staging branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/wp-45/nuke_s.png media/wp-45/metadata.json
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: import site-wide WordPress media #45"
+            git push origin HEAD:import/site-materials-stage
+          fi
