@@ -1,0 +1,26 @@
+name: Test WordPress publisher
+
+on:
+  push:
+    branches:
+      - main
+      - validation/publisher
+    paths:
+      - tools/wordpress_publisher.py
+      - tests/test_wordpress_publisher.py
+      - .github/workflows/test-wordpress-publisher.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Python source and run offline tests
+        run: |
+          python -m py_compile tools/wordpress_publisher.py tests/test_wordpress_publisher.py
+          python -m unittest discover -s tests -p 'test_wordpress_publisher.py' -v
