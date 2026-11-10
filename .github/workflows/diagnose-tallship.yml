@@ -1,0 +1,36 @@
+name: Diagnose tallship media origin
+on:
+  push:
+    branches:
+      - import/remaining-posts-media-20261110
+    paths:
+      - .github/workflows/diagnose-tallship.yml
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Probe alternative original media URLs
+        run: |
+          python - <<'PY'
+          import hashlib
+          from urllib.request import urlopen, Request
+          urls = [
+            "https://topquark22.wordpress.com/wp-content/uploads/2024/03/tallship.webp",
+            "https://topquark22.files.wordpress.com/2024/03/tallship.webp",
+            "https://vigilator.blog/wp-content/uploads/2024/03/tallship.webp",
+            "https://topquark22.wordpress.com/wp-content/uploads/2024/03/tallship.webp?download=1",
+            "https://topquark22.files.wordpress.com/2024/03/tallship.webp?download=1",
+          ]
+          for url in urls:
+              try:
+                  with urlopen(Request(url, headers={"User-Agent":"vigilator-media-origin-probe/1.0"}), timeout=15) as resp:
+                      data = resp.read(2_000_000)
+                      print(f"{url} -> {resp.geturl()} status={resp.status} content_type={resp.headers.get('content-type')} bytes={len(data)} sha256={hashlib.sha256(data).hexdigest()}", flush=True)
+              except Exception as exc:
+                  print(f"{url} ERROR: {type(exc).__name__}: {exc}", flush=True)
+          PY
