@@ -1,0 +1,48 @@
+{
+  "wordpress_site_id": 228574095,
+  "description": "Stage remaining WordPress page/media binaries; preserve one page per commit.",
+  "assets": [
+    {
+      "wordpress_site_id": 228574095,
+      "wordpress_media_id": 9,
+      "attached_post_id": null,
+      "original_filename": "12f3eea4-ab48-461e-a259-cd862b0d5b76.webp",
+      "source_url": "https://topquark22.wordpress.com/wp-content/uploads/2024/01/12f3eea4-ab48-461e-a259-cd862b0d5b76.webp",
+      "mime_type": "image/webp",
+      "expected_size_bytes": 409396,
+      "width": 1792,
+      "height": 1024,
+      "title": "12f3eea4-ab48-461e-a259-cd862b0d5b76",
+      "alt_text": "",
+      "caption": ""
+    },
+    {
+      "wordpress_site_id": 228574095,
+      "wordpress_media_id": 41,
+      "attached_post_id": null,
+      "original_filename": "mona-lisa-soup.jpg",
+      "source_url": "https://topquark22.wordpress.com/wp-content/uploads/2024/01/mona-lisa-soup.jpg",
+      "mime_type": "image/jpeg",
+      "expected_size_bytes": 42925,
+      "width": 1500,
+      "height": 1000,
+      "title": "Mona-Lisa-Soup",
+      "alt_text": "",
+      "caption": ""
+    },
+    {
+      "wordpress_site_id": 228574095,
+      "wordpress_media_id": 259,
+      "attached_post_id": 252,
+      "original_filename": "chatgpt-image-aug-17-2026-12_02_25-am.png",
+      "source_url": "https://topquark22.wordpress.com/wp-content/uploads/2026/08/chatgpt-image-aug-17-2026-12_02_25-am.png",
+      "mime_type": "image/png",
+      "expected_size_bytes": 2577460,
+      "width": 1672,
+      "height": 941,
+      "title": "ChatGPT Image Aug 17, 2026, 12_02_25&nbsp;AM",
+      "alt_text": "",
+      "caption": ""
+    }
+  ]
+}
