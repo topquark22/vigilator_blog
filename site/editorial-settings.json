@@ -1,0 +1,24 @@
+{
+  "wordpress_site_id": 228574095,
+  "timezone": "America/Toronto",
+  "date_format": "F j, Y",
+  "time_format": "H:i",
+  "language": "en_US",
+  "reading": {
+    "show_on_front": "posts",
+    "posts_per_page": 30,
+    "posts_per_rss": 10,
+    "rss_use_excerpt": false
+  },
+  "discussion": {
+    "default_comment_status": "open",
+    "default_ping_status": "open",
+    "require_name_email": true,
+    "thread_comments": true,
+    "thread_comments_depth": 3
+  },
+  "identity": {
+    "site_icon_id": 0,
+    "site_logo_id": 0
+  }
+}

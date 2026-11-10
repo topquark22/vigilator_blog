@@ -1,0 +1,716 @@
+{
+  "wordpress_site_id": 228574095,
+  "categories": [
+    {
+      "id": 1,
+      "name": "Uncategorized",
+      "slug": "uncategorized",
+      "description": "",
+      "parent": 0,
+      "count": 5
+    },
+    {
+      "id": 35,
+      "name": "Humour",
+      "slug": "humour",
+      "description": "",
+      "parent": 0,
+      "count": 1
+    },
+    {
+      "id": 5239,
+      "name": "Food and Drink",
+      "slug": "food-and-drink",
+      "description": "",
+      "parent": 0,
+      "count": 7
+    },
+    {
+      "id": 149257,
+      "name": "News and Analysis",
+      "slug": "news-and-analysis",
+      "description": "",
+      "parent": 0,
+      "count": 4
+    },
+    {
+      "id": 6563923,
+      "name": "Human Rights Advocacy",
+      "slug": "human-rights-advocacy",
+      "description": "",
+      "parent": 0,
+      "count": 0
+    },
+    {
+      "id": 14494980,
+      "name": "Poetry and Creative Writing",
+      "slug": "poetry-and-creative-writing",
+      "description": "",
+      "parent": 0,
+      "count": 1
+    },
+    {
+      "id": 62099691,
+      "name": "Literary Analysis and Criticism",
+      "slug": "literary-analysis-and-criticism",
+      "description": "",
+      "parent": 0,
+      "count": 2
+    },
+    {
+      "id": 769007280,
+      "name": "National and Global Advocacy",
+      "slug": "national-and-global-advocacy",
+      "description": "",
+      "parent": 0,
+      "count": 3
+    },
+    {
+      "id": 769565631,
+      "name": "Media, Music and Film",
+      "slug": "media-music-and-film",
+      "description": "",
+      "parent": 0,
+      "count": 1
+    }
+  ],
+  "tags": [
+    {
+      "id": 6,
+      "name": "technology",
+      "slug": "technology",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 103,
+      "name": "news",
+      "slug": "news",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 174,
+      "name": "space",
+      "slug": "space",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 177,
+      "name": "art",
+      "slug": "art",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 178,
+      "name": "books",
+      "slug": "books",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 196,
+      "name": "programming",
+      "slug": "programming",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 273,
+      "name": "blog",
+      "slug": "blog",
+      "description": "",
+      "count": 2
+    },
+    {
+      "id": 349,
+      "name": "writing",
+      "slug": "writing",
+      "description": "",
+      "count": 2
+    },
+    {
+      "id": 557,
+      "name": "literature",
+      "slug": "literature",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 586,
+      "name": "food",
+      "slug": "food",
+      "description": "",
+      "count": 4
+    },
+    {
+      "id": 816,
+      "name": "linguistics",
+      "slug": "linguistics",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 1098,
+      "name": "culture",
+      "slug": "culture",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 1342,
+      "name": "education",
+      "slug": "education",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 1836,
+      "name": "nasa",
+      "slug": "nasa",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 1934,
+      "name": "language",
+      "slug": "language",
+      "description": "",
+      "count": 2
+    },
+    {
+      "id": 2408,
+      "name": "deutsch",
+      "slug": "deutsch",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 2710,
+      "name": "allgemein",
+      "slug": "allgemein",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 2832,
+      "name": "recipes",
+      "slug": "recipes",
+      "description": "",
+      "count": 3
+    },
+    {
+      "id": 3205,
+      "name": "english",
+      "slug": "english",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 3345,
+      "name": "preservation",
+      "slug": "preservation",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 4269,
+      "name": "finance",
+      "slug": "finance",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 5178,
+      "name": "chicken",
+      "slug": "chicken",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 5239,
+      "name": "Food and Drink",
+      "slug": "food-and-drink",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 5412,
+      "name": "cocktails",
+      "slug": "cocktails",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 5893,
+      "name": "maintenance",
+      "slug": "maintenance",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 6096,
+      "name": "cooking",
+      "slug": "cooking",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 6135,
+      "name": "french",
+      "slug": "french",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 6635,
+      "name": "investing",
+      "slug": "investing",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 8590,
+      "name": "economy",
+      "slug": "economy",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 8845,
+      "name": "recipe",
+      "slug": "recipe",
+      "description": "",
+      "count": 3
+    },
+    {
+      "id": 9126,
+      "name": "cocktail",
+      "slug": "cocktail",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 12374,
+      "name": "artificial-intelligence",
+      "slug": "artificial-intelligence",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 13789,
+      "name": "dinner",
+      "slug": "dinner",
+      "description": "",
+      "count": 3
+    },
+    {
+      "id": 14067,
+      "name": "ai",
+      "slug": "ai",
+      "description": "",
+      "count": 2
+    },
+    {
+      "id": 14452,
+      "name": "francais",
+      "slug": "francais",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 16166,
+      "name": "coffee",
+      "slug": "coffee",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 18285,
+      "name": "equipment",
+      "slug": "equipment",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 18493,
+      "name": "unesco",
+      "slug": "unesco",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 18654,
+      "name": "pasta",
+      "slug": "pasta",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 24805,
+      "name": "espresso",
+      "slug": "espresso",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 27917,
+      "name": "gold",
+      "slug": "gold",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 40600,
+      "name": "esperanto",
+      "slug": "esperanto",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 53012,
+      "name": "cleaning",
+      "slug": "cleaning",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 79257,
+      "name": "sustainable-living",
+      "slug": "sustainable-living",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 86603,
+      "name": "cultural-heritage",
+      "slug": "cultural-heritage",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 93273,
+      "name": "silver",
+      "slug": "silver",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 115439,
+      "name": "water-conservation",
+      "slug": "water-conservation",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 244704,
+      "name": "recette",
+      "slug": "recette",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 406256,
+      "name": "clutch",
+      "slug": "clutch",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 1017177,
+      "name": "intangible-cultural-heritage",
+      "slug": "intangible-cultural-heritage",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 1400578,
+      "name": "composting-toilets",
+      "slug": "composting-toilets",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 116305918,
+      "name": "dailyprompt",
+      "slug": "dailyprompt",
+      "description": "",
+      "count": 0
+    },
+    {
+      "id": 757687150,
+      "name": "chatgpt",
+      "slug": "chatgpt",
+      "description": "",
+      "count": 1
+    },
+    {
+      "id": 759449347,
+      "name": "dailyprompt-1842",
+      "slug": "dailyprompt-1842",
+      "description": "",
+      "count": 0
+    }
+  ],
+  "post_term_assignments": [
+    {
+      "wordpress_id": 4,
+      "status": "publish",
+      "categories": [
+        769007280
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 12,
+      "status": "publish",
+      "categories": [
+        5239
+      ],
+      "tags": [
+        9126,
+        5412,
+        16166,
+        24805,
+        5239
+      ]
+    },
+    {
+      "wordpress_id": 15,
+      "status": "publish",
+      "categories": [
+        5239
+      ],
+      "tags": [
+        273,
+        586,
+        14452,
+        6135,
+        244704
+      ]
+    },
+    {
+      "wordpress_id": 33,
+      "status": "publish",
+      "categories": [
+        769007280
+      ],
+      "tags": [
+        86603,
+        1098,
+        1017177,
+        3345,
+        18493
+      ]
+    },
+    {
+      "wordpress_id": 67,
+      "status": "publish",
+      "categories": [
+        1
+      ],
+      "tags": [
+        53012,
+        406256,
+        18285,
+        5893,
+        103
+      ]
+    },
+    {
+      "wordpress_id": 70,
+      "status": "publish",
+      "categories": [
+        5239
+      ],
+      "tags": [
+        5178,
+        13789,
+        586,
+        8845,
+        2832
+      ]
+    },
+    {
+      "wordpress_id": 83,
+      "status": "publish",
+      "categories": [
+        149257
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 86,
+      "status": "publish",
+      "categories": [
+        769565631
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 91,
+      "status": "publish",
+      "categories": [
+        62099691
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 114,
+      "status": "publish",
+      "categories": [
+        35,
+        149257
+      ],
+      "tags": [
+        1400578,
+        1836,
+        174,
+        79257,
+        115439
+      ]
+    },
+    {
+      "wordpress_id": 159,
+      "status": "draft",
+      "categories": [
+        1
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 160,
+      "status": "publish",
+      "categories": [
+        62099691,
+        14494980
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 166,
+      "status": "publish",
+      "categories": [
+        5239
+      ],
+      "tags": [
+        13789,
+        586,
+        18654,
+        8845,
+        2832
+      ]
+    },
+    {
+      "wordpress_id": 181,
+      "status": "publish",
+      "categories": [
+        5239
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 186,
+      "status": "publish",
+      "categories": [
+        5239
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 199,
+      "status": "publish",
+      "categories": [
+        1
+      ],
+      "tags": [
+        14067,
+        12374,
+        757687150,
+        196,
+        6
+      ]
+    },
+    {
+      "wordpress_id": 214,
+      "status": "publish",
+      "categories": [
+        1
+      ],
+      "tags": [
+        14067,
+        178,
+        40600,
+        1934,
+        349
+      ]
+    },
+    {
+      "wordpress_id": 220,
+      "status": "publish",
+      "categories": [
+        769007280,
+        149257
+      ],
+      "tags": [
+        2710,
+        177,
+        273,
+        2408,
+        557
+      ]
+    },
+    {
+      "wordpress_id": 224,
+      "status": "publish",
+      "categories": [
+        1
+      ],
+      "tags": [
+        8590,
+        4269,
+        27917,
+        6635,
+        93273
+      ]
+    },
+    {
+      "wordpress_id": 228,
+      "status": "publish",
+      "categories": [
+        149257
+      ],
+      "tags": []
+    },
+    {
+      "wordpress_id": 231,
+      "status": "publish",
+      "categories": [
+        1
+      ],
+      "tags": [
+        1342,
+        3205,
+        1934,
+        816,
+        349
+      ]
+    },
+    {
+      "wordpress_id": 236,
+      "status": "publish",
+      "categories": [
+        5239
+      ],
+      "tags": [
+        6096,
+        13789,
+        586,
+        8845,
+        2832
+      ]
+    }
+  ]
+}
