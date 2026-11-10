@@ -1,0 +1,16 @@
+{
+  "wordpress_site_id": 228574095,
+  "wordpress_id": 159,
+  "type": "post",
+  "status": "draft",
+  "title": "Cadmium Red",
+  "wordpress_slug": "",
+  "wordpress_date_local": "2024-08-23T15:38:44",
+  "wordpress_date_gmt": "2024-08-23T19:38:44",
+  "wordpress_modified_at": "2024-08-23T15:38:44",
+  "wordpress_url": "https://vigilator.blog/?p=159",
+  "featured_media_id": 0,
+  "content_format": "wordpress-block-html",
+  "original_publication_date": null,
+  "archival_note": "Unpublished draft: WordPress returned an empty slug and an empty content body. The filesystem label is derived from the title, and YYYY-MM-DD is the WordPress draft date, not a publication date."
+}
