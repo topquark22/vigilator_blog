@@ -39,7 +39,7 @@ def download_asset(asset, checkout):
     if dest.exists():
         data = dest.read_bytes()
     else:
-        request = Request(url, headers={"User-Agent": "vigilator-blog-media-import/1.0"})
+        request = Request(url, headers={"User-Agent": "vigilator-blog-media-import/1.0", "Accept": asset["mime_type"]})
         with urlopen(request, timeout=60) as response:
             if urlsplit(response.geturl()).hostname not in ALLOWED_HOSTS:
                 raise ValueError("Unexpected redirect host")
