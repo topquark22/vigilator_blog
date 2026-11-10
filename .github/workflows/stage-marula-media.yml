@@ -1,0 +1,32 @@
+name: Stage Marula Whisper original media
+on:
+  push:
+    branches:
+      - import/article-12-media-stage
+    paths:
+      - .github/workflows/stage-marula-media.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  download-original:
+    if: github.ref_name == 'import/article-12-media-stage'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download and verify the WordPress original
+        run: python tools/fetch_wordpress_media.py --manifest staging/article-12-media.json
+      - name: Commit original binary to staging branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/wp-23/marula.png media/wp-23/metadata.json
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: stage Marula Whisper featured image (#23)"
+            git push origin HEAD:import/article-12-media-stage
+          fi

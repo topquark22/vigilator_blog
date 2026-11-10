@@ -1,0 +1,20 @@
+{
+  "wordpress_site_id": 228574095,
+  "description": "Featured image for WordPress article #12, Marula Whisper; import on staging only.",
+  "assets": [
+    {
+      "wordpress_site_id": 228574095,
+      "wordpress_media_id": 23,
+      "attached_post_id": 12,
+      "original_filename": "marula.png",
+      "source_url": "https://topquark22.wordpress.com/wp-content/uploads/2024/01/marula.png",
+      "mime_type": "image/png",
+      "expected_size_bytes": 898325,
+      "width": 1024,
+      "height": 1024,
+      "title": "marula",
+      "alt_text": "",
+      "caption": ""
+    }
+  ]
+}
