@@ -1,0 +1,20 @@
+{
+  "wordpress_site_id": 228574095,
+  "description": "Site-wide media referenced by customized templates, not article-specific attachments.",
+  "assets": [
+    {
+      "wordpress_site_id": 228574095,
+      "wordpress_media_id": 45,
+      "attached_post_id": null,
+      "original_filename": "nuke_s.png",
+      "source_url": "https://topquark22.wordpress.com/wp-content/uploads/2024/01/nuke_s.png",
+      "mime_type": "image/png",
+      "expected_size_bytes": 384004,
+      "width": 640,
+      "height": 640,
+      "title": "nuke_s",
+      "alt_text": "",
+      "caption": ""
+    }
+  ]
+}
