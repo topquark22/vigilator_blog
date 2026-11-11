@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "New Git-authored WordPress post",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "content_format", "title", "slug", "date", "status"],
+  "properties": {
+    "type": {"const": "post"},
+    "content_format": {"const": "markdown"},
+    "title": {"type": "string", "minLength": 1},
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+    "date": {"type": "string", "format": "date"},
+    "status": {"enum": ["draft", "publish"]},
+    "excerpt": {"type": "string"},
+    "category_ids": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+    "tag_ids": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+    "featured_media_id": {"type": "integer", "minimum": 1},
+    "images": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "url"],
+        "properties": {
+          "id": {"type": "integer", "minimum": 1},
+          "url": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "wordpress_id": {"type": "integer", "minimum": 1},
+    "wordpress_content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "wordpress_modified_at": {"type": "string"},
+    "wordpress_url": {"type": "string", "format": "uri"}
+  }
+}
