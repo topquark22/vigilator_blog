@@ -1,13 +1,13 @@
-# Synchronization tools
+# Editorial and publishing tools
 
-Reserved for future, separately reviewed CLI operations to:
+Git is the authoritative editorial source. WordPress is the publication destination.
+There is **no WordPress-to-Git content synchronization** or automatic publishing.
 
-- pull changes from WordPress into an import branch;
-- compare them with Git and the last synchronized baseline;
-- push **approved** Git revisions to WordPress;
-- verify the content after a write.
+- `new_article.py` creates empty Markdown posts and JSON sidecars without overwriting files.
+- `editorial_publisher.py` validates and previews committed Markdown and publishes an explicitly approved new or updated post, with readback verification.
+- `wordpress_publisher.py` continues to handle guarded updates to existing imported Gutenberg posts/pages.
 
-There is **no executable sync or publishing implementation** in this scaffold.
+See [docs/EDITORIAL.md](../docs/EDITORIAL.md) for the new-content workflow.
 
 ## Reusable media import
 

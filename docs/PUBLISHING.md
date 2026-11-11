@@ -1,5 +1,7 @@
 # Publishing approved Git content to WordPress.com
 
+For **new Markdown-authored posts**, use `tools/editorial_publisher.py` and [EDITORIAL.md](EDITORIAL.md). The following guide documents the separate, existing **content-only publisher for imported Gutenberg posts and pages**. Both are one-way Git → WordPress operations.
+
 The publisher is `tools/wordpress_publisher.py`. It uses only the Python
 standard library. **Nothing publishes automatically.**
 
@@ -62,7 +64,8 @@ python tools/wordpress_publisher.py \
 Here `FULL_..._SHA` are placeholders, not executable values.
 
 If WordPress has changed since the baseline (including a metadata-only
-edit that changes its modification timestamp), **stop and reconcile first**.
+edit that changes its modification timestamp), **stop and investigate first**.
+Do not edit content in the WordPress dashboard; reverse imports are unsupported.
 A post already matching the target content is a no-op.
 
 After publishing, record the approved commit and the reported WordPress

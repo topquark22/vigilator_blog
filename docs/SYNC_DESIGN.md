@@ -1,6 +1,6 @@
-# Bidirectional WordPress ↔ Git sync design
+# Archived bidirectional WordPress ↔ Git sync proposal
 
-**Design only.** There is no running synchronization pipeline or publisher yet.
+**Superseded; do not implement or follow this proposal.** The active design is one-way **Git → WordPress**, described in [EDITORIAL.md](EDITORIAL.md) and [WORKFLOW.md](WORKFLOW.md). Direct WordPress dashboard edits are unsupported; unexpected remote drift blocks publication. The design below is preserved solely as historical context.
 
 ## Canonical files
 
