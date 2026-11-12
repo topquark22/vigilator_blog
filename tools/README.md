@@ -11,7 +11,7 @@ See [docs/EDITORIAL.md](../docs/EDITORIAL.md) for the new-content workflow.
 
 ## Reusable media import
 
-The `import-wordpress-media.yml` GitHub Actions workflow runs only on `import/*` branches, after a push that changes `staging/media-manifest.json`, or through a manual workflow dispatch targeting such a branch.
+The former `import-wordpress-media.yml` GitHub Actions workflow is archived at [`docs/archive/import-wordpress-media.yml`](../docs/archive/import-wordpress-media.yml) and is no longer active on `main`. It previously ran on `import/*` branches when `staging/media-manifest.json` changed, or by manual dispatch. GitHub's repository-wide **Disable workflow** control should also be used to prevent invocation from older import branches.
 
 Its downloader is `tools/fetch_wordpress_media.py`, which verifies original file size, checks supported image signatures, writes per-asset SHA-256 metadata and does not contact the WordPress publishing API.
 

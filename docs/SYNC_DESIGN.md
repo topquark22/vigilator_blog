@@ -43,7 +43,7 @@ The assistant's connected WordPress app access is not a reusable API credential 
 
 ## Importing original media with GitHub Actions
 
-The reusable workflow `.github/workflows/import-wordpress-media.yml` stages original binaries on an isolated `import/*` branch. It does **not** publish to WordPress or merge into `main`.
+Historical instructions only: the former `.github/workflows/import-wordpress-media.yml` was archived to `docs/archive/import-wordpress-media.yml` and removed from the active workflows on `main` after the initial import. It staged original binaries on an isolated `import/*` branch, never published to WordPress, and never merged into `main`. Repository-wide disabling in GitHub Actions also prevents old import branches from invoking it.
 
 1. Create an `import/<article-or-site>` branch from current `main`.
 2. Add `staging/media-manifest.json` on that branch. It has the same structure as `site/shared-media.json`: a top-level `assets` array of reviewed WordPress attachment metadata, including `wordpress_media_id`, `original_filename`, `source_url`, `mime_type`, and `expected_size_bytes`.
