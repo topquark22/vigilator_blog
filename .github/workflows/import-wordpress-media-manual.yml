@@ -1,0 +1,70 @@
+name: Import WordPress media to staging
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_import:
+        description: 'Stage manifest-listed media on the selected import/* branch'
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wordpress-media-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  import-media:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Require explicit confirmation
+        env:
+          CONFIRM_IMPORT: ${{ inputs.confirm_import }}
+        run: |
+          if [ "$CONFIRM_IMPORT" != "true" ]; then
+            echo "Select confirm_import to stage WordPress media" >&2
+            exit 1
+          fi
+      - name: Require a temporary import branch
+        run: |
+          case "$GITHUB_REF_NAME" in
+            import/*) ;;
+            *) echo "Media imports must run on an import/* branch" >&2; exit 1 ;;
+          esac
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download and verify original media
+        run: python tools/fetch_wordpress_media.py --manifest staging/media-manifest.json
+      - name: Commit only the manifest-listed media
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          manifest = json.loads(Path("staging/media-manifest.json").read_text(encoding="utf-8"))
+          paths = []
+          for asset in manifest["assets"]:
+              media_id = asset["wordpress_media_id"]
+              filename = asset["original_filename"]
+              paths.extend((
+                  f"media/wp-{media_id}/{filename}",
+                  f"media/wp-{media_id}/metadata.json",
+              ))
+          if not paths:
+              raise SystemExit("The media manifest must list at least one asset")
+          subprocess.run(["git", "add", "--", *paths], check=True)
+          PY
+          if git diff --cached --quiet; then
+            echo "All verified media are already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "assets: stage verified WordPress media"
+          git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"

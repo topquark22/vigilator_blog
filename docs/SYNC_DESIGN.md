@@ -43,11 +43,11 @@ The assistant's connected WordPress app access is not a reusable API credential 
 
 ## Importing original media with GitHub Actions
 
-Historical instructions only: the former `.github/workflows/import-wordpress-media.yml` was archived to `docs/archive/import-wordpress-media.yml` and removed from the active workflows on `main` after the initial import. It staged original binaries on an isolated `import/*` branch, never published to WordPress, and never merged into `main`. Repository-wide disabling in GitHub Actions also prevents old import branches from invoking it.
+Historical background: the former push-triggered `.github/workflows/import-wordpress-media.yml` was archived at `docs/archive/import-wordpress-media.yml` after the initial import. A **different, manual-only** workflow now lives at `.github/workflows/import-wordpress-media-manual.yml`; see [REVERSE_IMPORT.md](REVERSE_IMPORT.md) for current instructions. Both workflows stage media on `import/*` branches, not `main`. The archived file is not the current runbook.
 
 1. Create an `import/<article-or-site>` branch from current `main`.
 2. Add `staging/media-manifest.json` on that branch. It has the same structure as `site/shared-media.json`: a top-level `assets` array of reviewed WordPress attachment metadata, including `wordpress_media_id`, `original_filename`, `source_url`, `mime_type`, and `expected_size_bytes`.
-3. Push the manifest commit. The workflow is triggered by the manifest change; it can also be started manually on an `import/*` branch from GitHub Actions.
+3. (Historical behavior.) The old workflow automatically ran when a manifest commit was pushed. The current importer **does not**; it requires manual dispatch with confirmation from GitHub Actions.
 4. GitHub Actions downloads the original binaries, verifies sizes and supported image signatures, computes SHA-256 checksums and commits **only the manifest-listed media paths** to the staging branch. It makes no change if the verified files are already current.
 5. Inspect the staging artifacts. Construct one clean article commit on current `main` referencing the verified media Git blobs and the exact WordPress article source; do **not** merge staging commits or include the manifest in `main`.
 

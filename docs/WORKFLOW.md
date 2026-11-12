@@ -29,9 +29,13 @@ WordPress numeric IDs and original dates are stable identifiers. Changing a publ
 4. For a new Markdown post, commit the verified receipt fields to its JSON sidecar before attempting another update. For legacy Gutenberg posts, retain the confirmed baseline separately.
 5. For substantive factual corrections, record an appropriate dated public correction notice if editorially warranted.
 
+## Exceptional WordPress-to-Git imports
+
+The default direction remains Git → WordPress. On demand, the media-only GitHub Actions importer may stage **manifest-listed media binaries** on an `import/*` branch for review. It never updates `main` or imports article bodies. For an exceptional article/page recovery, use a separately approved, agent-assisted import into a review branch; no automatic WordPress-to-Git content sync exists. See [REVERSE_IMPORT.md](REVERSE_IMPORT.md).
+
 ## WordPress dashboard edits
 
-Direct edits in WordPress are outside the supported workflow. If a remote post unexpectedly differs from the last verified publication, block and investigate; there is no automatic reverse import or three-way merge.
+Direct edits in WordPress are outside the normal workflow. If a remote post unexpectedly differs from the last verified publication, block and investigate. Never silently replace Git source or treat a manual import as a two-way sync.
 
 ## Confidentiality
 

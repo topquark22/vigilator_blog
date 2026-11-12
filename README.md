@@ -35,6 +35,7 @@ New articles are authored separately as `articles/YYYY-MM-DD/<slug>.md` with an 
 - Edit on branches; review diffs and merge to `main` before publication.
 - Publishing to WordPress requires separate, explicit approval; merging alone does not publish.
 - Git is authoritative: do not make manual WordPress-side edits. The publishers block on detected WordPress drift rather than importing dashboard changes.
+- Exceptionally, manual-only [WordPress-to-Git media staging](docs/REVERSE_IMPORT.md) is available on an `import/*` review branch; it never runs automatically or overwrites `main`.
 - Keep secrets, API credentials, exports, and local caches out of version control.
 - For substantive corrections to published articles, consider a dated public editorial correction note as well as the Git history.
 
